@@ -1,10 +1,14 @@
 @import "../../App.scss";
 
+$clr-light-gray: #f0f0f0; // Define a suitable professional color
+$clr-blue: #007bff; // Define a suitable professional color
+$transition-ease: 0.3s ease; // Define the transition properties as needed
+
 .cart-modal {
     position: absolute;
     right: -10px;
     top: calc(100% + 10px);
-    background-color: $clr-light-gray; /* Use a suitable professional color */
+    background-color: $clr-light-gray;
     width: 360px;
     box-shadow: 0px 7px 29px 0px rgba(100, 100, 111, 0.25);
     padding: 1.8rem;
@@ -27,7 +31,7 @@
 
     &::-webkit-scrollbar-thumb {
         border-radius: 10px;
-        background-color: lighten($clr-blue, 5%); /* Adjust with a professional color */
+        background-color: lighten($clr-blue, 5%);
         outline: 1px solid lighten($clr-blue, 5%);
     }
 
@@ -36,7 +40,7 @@
         content: "";
         border-left: 10px solid transparent;
         border-right: 10px solid transparent;
-        border-bottom: 13px solid $clr-light-gray; /* Use a suitable professional color */
+        border-bottom: 13px solid $clr-light-gray;
         right: 8px;
         top: -13px;
     }
