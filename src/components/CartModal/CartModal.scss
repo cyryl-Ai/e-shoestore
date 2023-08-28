@@ -29,12 +29,6 @@ $transition-ease: 0.3s ease; // Define the transition properties as needed
         border-radius: 10px;
     }
 
-    &::-webkit-scrollbar-thumb {
-        border-radius: 10px;
-        background-color: lighten($clr-blue, 5%);
-        outline: 1px solid lighten($clr-blue, 5%);
-    }
-
     &::after {
         position: absolute;
         content: "";
