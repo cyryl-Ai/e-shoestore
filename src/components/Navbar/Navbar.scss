@@ -1,0 +1,108 @@
+@import "../../App.scss";
+
+.navbar {
+    padding-top: 10px;
+    padding-bottom: 10px;
+
+    .navbar-brand {
+        font-size: 2.2rem; /* Slightly reduced font size */
+    }
+
+    .brand-and-toggler {
+        .sidebar-show-btn {
+            margin-right: 10px;
+            margin-top: 4px;
+            transition: $transition-ease;
+
+            &:hover {
+                opacity: 0.9;
+            }
+        }
+    }
+
+    .navbar-collapse {
+        .navbar-search {
+            padding: 4px;
+            margin-left: 28px; /* Slightly adjusted margin */
+            border-radius: 4px;
+            box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+
+            .form-control {
+                width: 100%;
+                padding: 0 14px; /* Slightly reduced padding */
+                color: rgba(0, 0, 0, 0.85); /* Adjusted text color */
+                caret-color: $clr-blue; /* Adjusted caret color */
+
+                &::placeholder {
+                    font-size: 13px;
+                    font-family: $font-family-manrope;
+                    letter-spacing: 0.5px;
+                }
+            }
+
+            .search-btn {
+                background-color: $clr-blue; /* Changed to a professional color */
+                width: 55px;
+                height: 30px; /* Adjusted height */
+            }
+
+            @media screen and (max-width: 576px) {
+                display: none;
+            }
+        }
+
+        .navbar-nav {
+            margin-left: 28px; /* Slightly adjusted margin */
+            margin-top: 6px; /* Slightly adjusted margin */
+
+            .nav-item {
+                margin-right: 14px; /* Slightly reduced margin */
+                .nav-link {
+                    transition: $transition-ease;
+
+                    &:hover {
+                        opacity: 0.95;
+                    }
+                }
+            }
+
+            @media screen and (max-width: 992px) {
+                display: none;
+            }
+        }
+    }
+
+    .navbar-cart {
+        margin-left: 28px; /* Slightly adjusted margin */
+        height: 28px; /* Adjusted height */
+        font-size: 2rem;
+
+        .cart-btn {
+            position: relative;
+
+            .cart-items-value {
+                position: absolute;
+                top: -10px;
+                right: -8px;
+                background-color: $clr-gray; /* Changed to a professional shade of gray */
+                font-size: 14px;
+                font-weight: 500;
+                color: $clr-blue; /* Changed to a professional color */
+                padding: 0 0.4rem;
+                width: 20px;
+                height: 20px; /* Adjusted height */
+                border-radius: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+
+            &:hover {
+                .cart-modal {
+                    opacity: 1;
+                    visibility: visible;
+                }
+            }
+        }
+    }
+}

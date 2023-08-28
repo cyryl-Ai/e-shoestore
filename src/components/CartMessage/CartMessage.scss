@@ -1,0 +1,25 @@
+/* General styles */
+.cart-message {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 3px;
+    padding: 30px 2rem;
+    max-width: 90%; /* Added to limit the width for smaller screens */
+
+    /* Center icon and adjust spacing */
+    .cart-message-icon {
+        display: block;
+        margin: 0 auto 1.7rem;
+        text-align: center;
+
+        img {
+            width: 45px;
+            height: 45px;
+            display: block;
+            margin: 0 auto;
+        }
+    }
+}

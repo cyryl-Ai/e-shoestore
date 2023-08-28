@@ -1,0 +1,125 @@
+@import "../../App.scss";
+
+.empty-cart {
+    min-height: 60vh;
+
+    img {
+        width: 120px;
+        margin-bottom: 1rem;
+    }
+
+    .shopping-btn {
+        padding: 0.6rem 2.6rem; /* Adjusted padding for better button size */
+        margin-top: 1.4rem; /* Slightly adjusted margin */
+        border: 1px solid $clr-blue; /* Changed to a professional blue color */
+        transition: $transition-ease;
+
+        &:hover {
+            background-color: transparent;
+            color: $clr-blue; /* Changed to a professional blue color */
+        }
+    }
+}
+
+.cart {
+    overflow-x: auto; /* Changed to "auto" for better scrolling experience */
+    padding-top: 2rem;
+    min-height: 85vh;
+
+    &::-webkit-scrollbar {
+        height: 5px;
+    }
+
+    &::-webkit-scrollbar-track {
+        box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
+        border-radius: 10px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        border-radius: 10px;
+        background-color: lighten($clr-blue, 5%); /* Adjusted color */
+        outline: 1px solid $clr-blue; /* Adjusted color */
+    }
+
+    .container {
+        padding: 0;
+    }
+
+    .cart-ctable {
+        min-width: 1000px;
+
+        .cart-ctr {
+            grid-template-columns: 1fr 4fr 2fr 2fr 2fr 2fr;
+            min-height: 40px;
+            border-bottom: 1px solid $clr-light-gray; /* Changed to a professional light gray color */
+            display: grid;
+            align-items: center !important;
+        }
+
+        .cart-chead {
+            margin-bottom: 2rem;
+            padding: 0 2rem; /* Adjusted padding */
+            box-shadow: rgba(60, 64, 67, 0.01) 0px 1px 2px 0px, rgba(60, 64, 67, 0.01) 0px 1px 3px 1px;
+            border-radius: 3px;
+            color: rgba(0, 0, 0, 0.6);
+        }
+
+        .cart-cbody {
+            padding: 0 2rem; /* Adjusted padding */
+            box-shadow: rgba(60, 64, 67, 0.01) 0px 1px 2px 0px, rgba(60, 64, 67, 0.01) 0px 1px 3px 1px;
+            border-radius: 3px;
+            font-size: 14px; /* Adjusted font size */
+            color: rgba(0, 0, 0, 0.6);
+        }
+
+        .delete-btn {
+            font-size: 14px;
+            transition: $transition-ease;
+
+            &:hover {
+                color: $clr-danger;
+            }
+        }
+
+        .qty-change {
+            .qty-decrease, .qty-increase {
+                font-size: 13px;
+                width: 28px;
+                height: 28px;
+                border: 1px solid rgba(0, 0, 0, 0.1);
+            }
+
+            .qty-value {
+                width: 36px;
+                height: 28px;
+                border-top: 1px solid rgba(0, 0, 0, 0.1);
+                border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+            }
+        }
+
+        .cart-cfoot {
+            margin-top: 2rem;
+            padding: 0 2rem; /* Adjusted padding */
+
+            .total-txt {
+                margin-right: -1rem;
+            }
+
+            .clear-cart-btn {
+                border: 1px solid $clr-danger;
+                padding: 0.7rem 1rem;
+                transition: $transition-ease;
+
+                &:hover {
+                    background-color: $clr-danger;
+                    color: $clr-white;
+                }
+            }
+
+            .checkout-btn {
+                padding: 0.7rem 2.6rem; /* Adjusted padding for better button size */
+                margin-top: 0.6rem; /* Slightly adjusted margin */
+            }
+        }
+    }
+}
